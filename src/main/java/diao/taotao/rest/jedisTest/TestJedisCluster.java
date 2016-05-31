@@ -2,7 +2,6 @@ package diao.taotao.rest.jedisTest;
 
 import java.util.HashSet;
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +13,7 @@ public class TestJedisCluster {
     private static String url = "192.168.1.193";
     private static int port = 6379;
 
-    @Test
+   // @Test
     public void testJedisCluster() {
         HashSet<HostAndPort> nodes = new HashSet<>();
         nodes.add(new HostAndPort(url, 7001));
@@ -36,7 +35,7 @@ public class TestJedisCluster {
     /**
      * 集群版测试 2016年5月31日19:30
      */
-    @Test
+    //@Test
     public void testSpringJedisCluster() {
         ApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");

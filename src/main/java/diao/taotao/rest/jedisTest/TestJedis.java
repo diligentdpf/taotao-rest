@@ -1,7 +1,6 @@
 package diao.taotao.rest.jedisTest;
 
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,7 +15,7 @@ public class TestJedis {
     private static String url = "192.168.1.193";
     private static int port = 6379;
 
-    @Test
+    //@Test
     public void testJedisSingle() {
         // 创建一个jedis的对象。
         Jedis jedis = new Jedis(url, port);
@@ -32,7 +31,7 @@ public class TestJedis {
     /**
      * 使用连接池
      */
-    @Test
+   //@Test
     public void testJedisPool() {
         // 创建jedis连接池
         JedisPool pool = new JedisPool(url, port);
@@ -48,7 +47,7 @@ public class TestJedis {
     /**
      * 单机版测试 2016年5月31日19:16
      */
-    @Test
+   // @Test
     public void testSpringJedisSingle() {
         ApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
